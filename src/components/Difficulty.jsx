@@ -1,15 +1,14 @@
-/* eslint-disable react/prop-types */
-const difficultyLevel = ['easy', 'medium', 'hard'];
+import difficultyData from './difficultyData';
 
 export default function Difficulty({ setDifficulty }) {
   return (
     <section className="difficulty" title="Choose Difficulty">
       <p>Choose your Game difficulty:</p>
       <ul className="button-list">
-        {difficultyLevel.map((item) => (
-          <li key={item}>
+        {difficultyData.map((item) => (
+          <li key={item.level}>
             <button onClick={() => setDifficulty(item)} type="button">
-              {capitalize(item)}
+              {capitalize(item.level)}
             </button>
           </li>
         ))}
