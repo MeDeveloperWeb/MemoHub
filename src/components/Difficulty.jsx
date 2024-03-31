@@ -1,4 +1,5 @@
 import difficultyData from './difficultyData';
+import { capitalize } from './utils';
 
 export default function Difficulty({ setDifficulty }) {
   return (
@@ -15,8 +16,4 @@ export default function Difficulty({ setDifficulty }) {
       </ul>
     </section>
   );
-}
-
-function capitalize(string) {
-  return string[0].toUpperCase() + string.substring(1);
 }

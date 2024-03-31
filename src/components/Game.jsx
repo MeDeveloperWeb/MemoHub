@@ -6,6 +6,7 @@ import {
   pokemonCount
 } from './pokemonData';
 import Dialog from './Dialog';
+import { shuffleArray } from './utils';
 
 export default function Game({ count, gameStatus, setGameStatus }) {
   const [pokemons, setPokemons] = useState([]);
@@ -61,12 +62,4 @@ export default function Game({ count, gameStatus, setGameStatus }) {
       <Dialog gameStatus={gameStatus} modalRef={modalRef} />
     </>
   );
-}
-
-function shuffleArray(array) {
-  // stackoverflow.com/a/46545530
-  return array
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
 }
