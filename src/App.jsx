@@ -1,13 +1,19 @@
 import { useState } from 'react';
 import Difficulty from './components/Difficulty';
+import Game from './components/Game';
 
 function App() {
   const [difficulty, setDifficulty] = useState(null);
+  const [gameStatus, setGameStatus] = useState('ongoing');
 
   return difficulty === null ? (
     <Difficulty setDifficulty={setDifficulty} />
   ) : (
-    <h1>Hi</h1>
+    <Game
+      count={difficulty.cardCount}
+      setGameStatus={setGameStatus}
+      gameStatus={gameStatus}
+    />
   );
 }
 
