@@ -6,7 +6,7 @@ import {
   pokemonCount
 } from './pokemonData';
 import Dialog from './Dialog';
-import { shuffleArray } from './utils';
+import { capitalize, shuffleArray } from './utils';
 
 export default function Game({ count, gameStatus, setGameStatus }) {
   const [pokemons, setPokemons] = useState([]);
@@ -53,7 +53,7 @@ export default function Game({ count, gameStatus, setGameStatus }) {
               }
             >
               <img src={getPokemonImageURL(id)} alt={name} />
-              <figcaption>{name}</figcaption>
+              <figcaption>{capitalize(name)}</figcaption>
             </figure>
           );
         })}
