@@ -7,7 +7,7 @@ import {
 } from './pokemonData';
 import Dialog from './Dialog';
 import { capitalize, shuffleArray } from './utils';
-import loading from '/loading.gif';
+import loading from '../assets/loading.gif';
 
 export default function Game({ count, gameStatus, setGameStatus }) {
   const [pokemons, setPokemons] = useState([]);

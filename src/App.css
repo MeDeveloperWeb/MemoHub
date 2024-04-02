@@ -96,7 +96,7 @@ section.image-container {
   }
   50% {
     transform: rotateY(180deg);
-    content: url(./card-back.jpg);
+    content: url(./assets/card-back.jpg);
   }
   100% {
     transform: rotateY(0deg);
