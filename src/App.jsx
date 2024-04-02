@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Difficulty from './components/Difficulty';
 import Game from './components/Game';
+import './App.css';
 
 function App() {
   const [difficulty, setDifficulty] = useState(null);
